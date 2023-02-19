@@ -11,6 +11,6 @@ article {
 }
 .nomean {
     background-color: aliceblue;
-    display: inline;
+    display: inline-block;
     margin-top: 2rem;
 }
