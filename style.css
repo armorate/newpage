@@ -1,0 +1,16 @@
+::selection {
+    background: blueviolet;
+}
+* {
+    background-color: black;
+    color: rgb(2,233 , 18);
+}
+article {
+    margin: 3rem 0rem 0rem 2rem;
+    /*top right bottom right*/
+}
+.nomean {
+    background-color: aliceblue;
+    display: inline;
+    margin-top: 2rem;
+}
