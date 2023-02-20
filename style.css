@@ -10,11 +10,13 @@ article {
     /*top right bottom right*/
 }
 .nomean {
-    background-color: aliceblue;
+    background-color: rgb(39, 77, 110);
     display: inline-block;
     margin-top: 2rem;
 }
 p.nomean {
-    padding-top: 2.5rem;
-    margin-left: 3rem;
+    padding-block: 1.3rem;
+    padding-inline-start: 2rem;
+    margin-inline-start: -1.2rem;
+    border-radius: 3rem;
 }
