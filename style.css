@@ -2,21 +2,25 @@
     background: blueviolet;
 }
 * {
-    background-color: black;
     color: rgb(2,233 , 18);
 }
-article {
-    margin: 3rem 0rem 0rem 2rem;
-    /*top right bottom right*/
+body {
+    background-color: black;
 }
-.nomean {
-    background-color: rgb(39, 77, 110);
-    display: inline-block;
+#blockel {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 15px rgb(81, 102, 39) solid;
+    background-color: rgb(100, 78, 49);
+    box-sizing: content-box; /* box-sizing is content-box by default*/
+}
+#inlineel {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 15px rgb(81, 102, 39) solid;
+    background-color: rgb(100, 78, 49);
     margin-top: 2rem;
-}
-p.nomean {
-    padding-block: 1.3rem;
-    padding-inline-start: 2rem;
-    margin-inline-start: -1.2rem;
-    border-radius: 3rem;
+    box-sizing: border-box; /*it limits the content size as defiined in height and width*/
 }
