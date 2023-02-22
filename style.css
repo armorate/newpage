@@ -14,6 +14,7 @@ body {
     border: 15px rgb(81, 102, 39) solid;
     background-color: rgb(100, 78, 49);
     box-sizing: content-box; /* box-sizing is content-box by default*/
+    overflow: auto; /*overflow is used when content overflows, we enable scroll on X or Y axis and manage it.*/
 }
 #borderbox {
     height: 100px;
