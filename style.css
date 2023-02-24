@@ -5,21 +5,40 @@
     color: rgb(2,233 , 18);
 }
 body {
-    background-color: black;
-    margin: 0px;
-}
+    background-color: black;}
 a  {
     display: block;
 }
-#contentbox {
-    background-color: rgb(54, 84, 110);
-    width: 49vw;
-    height: 69vh;
-    display: inline-block;
+#boxes  {
+    border: 2px solid yellowgreen;
+    margin-top: 4rem;
 }
-#borderbox  {
-    background-color: rgb(47, 107, 87);
-    width: 50vw;
-    height: 45px;
-    display: inline-block;
+#box1, #box2, #box3, #box4, #box5, #box6 {
+    height: 6rem;
+    width: 6rem;
+}
+#box1 {
+    background-color: rgb(20, 90, 20);
+}
+#box2  {
+    background-color: rgb(119, 78, 15);
+}
+#box3 {
+    background-color: rgb(49, 146, 146);
+}
+
+#box4 {
+    background-color: rgb(20, 90, 20);
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
+#box5 {
+    background-color: rgb(119, 78, 15);
+    position: relative;
+    left: 80%;
+    bottom: 2rem;
+}
+#box6 {
+    background-color: rgb(49, 146, 146);
 }
