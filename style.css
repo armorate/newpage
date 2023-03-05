@@ -2,43 +2,25 @@
     background: blueviolet;
 }
 * {
-    color: rgb(2,233 , 18);
+    color: rgb(255, 255, 255);
 }
 body {
     background-color: black;}
 a  {
     display: block;
+    margin-bottom: 1rem;
+    color: rgb(93, 240, 79);
 }
-#boxes  {
-    border: 2px solid yellowgreen;
-    margin-top: 4rem;
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: aquamarine;
+    float: left;
 }
-#box1, #box2, #box3, #box4, #box5, #box6 {
-    height: 6rem;
-    width: 6rem;
+.author {
+    font-size: 1.7rem;
 }
-#box1 {
-    background-color: rgb(20, 90, 20);
-}
-#box2  {
-    background-color: rgb(119, 78, 15);
-}
-#box3 {
-    background-color: rgb(49, 146, 146);
-}
-
-#box4 {
-    background-color: rgb(20, 90, 20);
-    position: fixed;
-    right: 0;
-    z-index: 1;
-}
-#box5 {
-    background-color: rgb(119, 78, 15);
-    position: relative;
-    left: 80%;
-    bottom: 2rem;
-}
-#box6 {
-    background-color: rgb(49, 146, 146);
+.tweet {
+    border: 2px solid yellow;
+    clear: both;
 }
