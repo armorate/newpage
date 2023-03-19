@@ -11,16 +11,20 @@ a  {
     margin-bottom: 1rem;
     color: rgb(93, 240, 79);
 }
-.avatar {
-    width: 5rem;
+.box1, .box2, .box3 {
     height: 5rem;
-    background-color: aquamarine;
-    float: left;
+    width: 5rem;
+    background-color: rgb(85, 133, 117);
+    margin: 1rem;
 }
-.author {
-    font-size: 1.7rem;
+.container {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 70vh;
+    align-items: center;
 }
-.tweet {
-    border: 2px solid yellow;
-    clear: both;
+.box1 {
+    align-self: flex-start;
 }
