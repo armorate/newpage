@@ -1,5 +1,10 @@
-let coolDishes = ['pasta','curd','veggies'];
-coolDishes[3] = 43;
-console.log(coolDishes);
-// in javascript arrays are just objects with some extra features like indexing, array can have different type of elements just like objects
-console.log(coolDishes[3]);
+function greet(firstName, lastName) {
+  console.log("Hello " + firstName + " " + lastName + ".");
+}
+// defining a function with prototype and giving argument while calling it
+greet("Byaas", "Rangeela");
+
+function age(birthYear) {
+  return 2023 - birthYear;
+}
+console.log(age(1998));
