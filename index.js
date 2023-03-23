@@ -1,20 +1,8 @@
-let x = 6;
-let y = 4;
+// Assignment Operator
+let x = 5;
 
-// Arithmetic Operators
-// console.log(x + y);
-// console.log(x - y);
-// console.log(x * y);
-// console.log(x / y);
-// console.log(x % y);
-// console.log(x ** y); // this is exponantiation operator, it means x^y
+x = x + 3;
+x += 3; // here line4 and line5 are exactly same
 
-// increment operator(++)
-console.log(++x); //this way, first it increases the value and then prints it
-console.log(x);
-console.log(x++); //this way, first it prints the value and then increases it
-console.log(x);
-
-// decrement operator
-console.log(y--);
-console.log(y);
+x = x * 2;
+x *= 2; //here line7 and line8 are exactly same
