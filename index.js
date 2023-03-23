@@ -1,13 +1,10 @@
-let x = 4;
-
-// Comparison Operators
-
-// Relational Operator
-console.log(x < 3);
-console.log(x > 2);
-console.log(x <= 4);
-console.log(x >= 8);
-
 // Equality Operator
-console.log(x === 4); // checking if the values are equal
-console.log(x !== 4); // checking if the values are not equal
+
+// Strict Equality Operator (checks both, type and value of data)
+console.log(1 === 1);
+console.log("1" === 1);
+
+// Lose Equality Operator (only checks value of data)
+console.log(1 == 1);
+console.log("1" == 1);
+console.log(true == 1);
