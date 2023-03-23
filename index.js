@@ -1,8 +1,13 @@
-// Assignment Operator
-let x = 5;
+let x = 4;
 
-x = x + 3;
-x += 3; // here line4 and line5 are exactly same
+// Comparison Operators
 
-x = x * 2;
-x *= 2; //here line7 and line8 are exactly same
+// Relational Operator
+console.log(x < 3);
+console.log(x > 2);
+console.log(x <= 4);
+console.log(x >= 8);
+
+// Equality Operator
+console.log(x === 4); // checking if the values are equal
+console.log(x !== 4); // checking if the values are not equal
