@@ -1,10 +1,6 @@
-// Equality Operator
+// Ternary Operator (checks condition and gives return on the same line)
 
-// Strict Equality Operator (checks both, type and value of data)
-console.log(1 === 1);
-console.log("1" === 1);
+let age = 27;
+let pass = age >= 18 ? "Yes" : "No";
 
-// Lose Equality Operator (only checks value of data)
-console.log(1 == 1);
-console.log("1" == 1);
-console.log(true == 1);
+console.log("Entry allowed = " + pass);
