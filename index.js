@@ -1,6 +1,16 @@
-// Ternary Operator (checks condition and gives return on the same line)
+// Logical Operator with boolean values (does the AND, OR and NOR operations)
 
-let age = 27;
-let pass = age >= 18 ? "Yes" : "No";
+let attendence = true;
+let percentage = false;
 
-console.log("Entry allowed = " + pass);
+//AND operator
+let result = attendence && percentage;
+console.log(result);
+
+// OR operator
+let promoted = attendence || percentage;
+console.log(promoted);
+
+// NOR operator
+let failed = !result;
+console.log(failed);
