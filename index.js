@@ -1,23 +1,12 @@
-// Logical Operator with Non-boolean values
+// Bitwise Operators => these are used to do operations between binary values.
 
-// if we compare a boolean false and a non-boolean value, then we will get the non-boolean value as true*.
-// Some non-boolean values are considered false in javascript which are :-  undefined, null, 0, false, '', NaN
+// 1 = 00000001
+// 2 = 00000010
 
-let op1 = false || true;
-console.log(op1);
+// Bitwise OR ( | )
+console.log(2 | 1);
+// here it will compare both the binary values bitwise at each index and return the true value for that index in output if atleast one of the value is true.
 
-let op2 = false || 4;
-console.log(op2);
-
-let op3 = false || "tej";
-console.log(op3);
-
-let op4 = 098 || true;
-console.log(op4);
-
-let op5 = null || true;
-console.log(op5);
-
-let op6 = false || NaN;
-console.log(op6);
-// in op6 it returns NaN, because it starts from left and skips false because its false and returns NaN.
+// Bitwise AND ( & )
+console.log(1 & 2);
+// here it will compare both the binary values at each bit by index and return true only when both the values at the same index are also true.
