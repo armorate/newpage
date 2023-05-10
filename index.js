@@ -1,9 +1,26 @@
 // Conditional Statements => there are two kinds I. if..else  II. switch..case
 
-// if..else conditonal statements
+// switch..case conditonal statements
 
-let time = 14;
+let weather = "summer";
 
-if (time >= 6 && time < 12) console.log("Good Morning!");
-else if (time >= 12 && time < 18) console.log("Good Evening!");
-else console.log("Good Night!");
+switch (weather) {
+  case "spring":
+    console.log("its dry and windy outside");
+    break;
+
+  case "summer":
+    console.log("its hot outside");
+    break;
+
+  case "mansoon":
+    console.log("its rainy outside");
+    break;
+
+  case "autumn":
+    console.log("its humid outside");
+    break;
+
+  default:
+    console.log("its cold out there.");
+}
