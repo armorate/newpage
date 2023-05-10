@@ -1,11 +1,9 @@
-// Swapping Variables
+// Conditional Statements => there are two kinds I. if..else  II. switch..case
 
-let a = 56;
-let b = "you";
+// if..else conditonal statements
 
-let c = a;
-a = b;
-b = c;
+let time = 14;
 
-console.log(a);
-console.log(b);
+if (time >= 6 && time < 12) console.log("Good Morning!");
+else if (time >= 12 && time < 18) console.log("Good Evening!");
+else console.log("Good Night!");
