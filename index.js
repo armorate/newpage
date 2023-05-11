@@ -1,5 +1,9 @@
 // Loops => there many kinds of loops in js.
 
-// for loop
+// while loop
 
-for (i = 0; i < 3; i++) console.log("Hello " + i);
+let i = 4;
+while (i >= 0) {
+  console.log("hI " + i);
+  i--;
+}
