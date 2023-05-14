@@ -1,11 +1,13 @@
 // Loops => there many kinds of loops in js.
 
-// do while loop
+// for-in loop
 
-let i = 1;
-do {
-  console.log("hIlO " + i);
-  i++;
-} while (i <= 7);
+// this loop used the display elements of array or objects.
 
-// do while loop will execute atleast once, even if the given condition is wrong.
+let stuff = { name: "Tammy", amount: 54, weight: 53 };
+
+for (let key in stuff) {
+  console.log(key, stuff[key]);
+}
+
+// In for-in loops a key is generated after each iteration, here which is stored in the key variable.
