@@ -1,13 +1,13 @@
 // Loops => there many kinds of loops in js.
 
-// for-in loop
+// for-of loop
 
-// this loop used the display elements of array or objects.
+// this loop used the display elements of an array.
 
-let stuff = { name: "Tammy", amount: 54, weight: 53 };
+let stuff = [45, 78, 0.7, 53];
 
-for (let key in stuff) {
-  console.log(key, stuff[key]);
-}
+for (let key of stuff) console.log(key);
 
-// In for-in loops a key is generated after each iteration, here which is stored in the key variable.
+// In for-of loop, the key is generated after each iteration returns the value of the element instead of propertie/metadata.
+
+// For-of loops are only used for arrays and use of for-in loop is not recommended for arrays.
