@@ -1,13 +1,16 @@
-// Loops => there many kinds of loops in js.
+// write a function that takes two numbers and returns the maximum of the two.
 
-// Continue and Break keywords
+let op = max(8, 8);
+console.log(op);
 
-for (i = 3; i <= 9; i++) {
-  if (i === 4) {
-    continue; // continue skips the current iteration.
+function max(x, y) {
+  if (x > y) {
+    return x;
+  } else if (y > x) {
+    return y;
+  } else if (x === y) {
+    return "Both the given values are equal.";
+  } else {
+    return "I don't know";
   }
-  if (i % 4 === 0) {
-    break; // break stops the loop.
-  }
-  console.log(i);
 }
