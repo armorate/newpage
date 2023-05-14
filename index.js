@@ -1,16 +1,10 @@
-// write a function that takes two numbers and returns the maximum of the two.
+// write a function to find oreantation of image.
 
-let op = max(8, 8);
-console.log(op);
+let op = imageOr(448, 574);
+console.log("image is " + op);
 
-function max(x, y) {
-  if (x > y) {
-    return x;
-  } else if (y > x) {
-    return y;
-  } else if (x === y) {
-    return "Both the given values are equal.";
-  } else {
-    return "I don't know";
-  }
+function imageOr(width, height) {
+  if (width > height) return "landscape.";
+  else if (width < height) return "vertical.";
+  else return "square.";
 }
