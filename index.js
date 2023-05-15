@@ -1,17 +1,10 @@
-// write a function to fizzbuzz
-// Divisible by 3 return fizz
-// Divisible by 5 return buzz
-// Divisible by both 3 and 5 return fizzbuzz
-// Divisible by none then return the number
-// If not a number then return Not A Number
+// Write a programme to print numbers and their nature(odd/even).
 
-let op = fizzBuzz(45000);
-console.log(op);
+printNumbers(5);
 
-function fizzBuzz(number) {
-  if (isNaN(number)) return "Not A Number";
-  else if (number % 15 === 0) return "fizzBuzz";
-  else if (number % 3 === 0) return "fizz";
-  else if (number % 5 === 0) return "Buzz";
-  else return number;
+function printNumbers(toNum) {
+  for (i = 0; i <= toNum; i++) {
+    let type = i % 2 === 0 ? "Even" : "Odd";
+    console.log(i + " " + type);
+  }
 }
