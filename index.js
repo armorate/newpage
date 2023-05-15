@@ -1,13 +1,17 @@
-// Write a programme to count truthy values in an array.
+// Write a programme to show only the string elements of an object.
 
-let array = [false, "fd", 45, null, 0, true, "number", NaN, 99, 38, " ", ""];
+let movie = {
+  name: "fiction",
+  year: 1997,
+  director: "andy",
+  runtime: 97,
+  rating: 4.8,
+};
 
-countTruthy(array);
+stringValue(movie);
 
-function countTruthy(array) {
-  let i = 0;
-  for (let key of array) {
-    if (key) i++;
+function stringValue(movie) {
+  for (let key in movie) {
+    if (typeof movie[key] == "string") console.log(key, movie[key]);
   }
-  console.log(i);
 }
