@@ -1,17 +1,13 @@
-// Write a programme to show only the string elements of an object.
+// Write a programme to return addition of the numbers which are multiple of 3 and 5 between a given number.
 
-let movie = {
-  name: "fiction",
-  year: 1997,
-  director: "andy",
-  runtime: 97,
-  rating: 4.8,
-};
+console.log(sumMulti(15));
 
-stringValue(movie);
+function sumMulti(limit) {
+  let sum = 0;
 
-function stringValue(movie) {
-  for (let key in movie) {
-    if (typeof movie[key] == "string") console.log(key, movie[key]);
+  for (i = 0; i <= limit; i++) {
+    if (i % 3 == 0) sum += i;
+    if (i % 5 == 0) sum += i;
   }
+  return sum;
 }
