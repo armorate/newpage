@@ -1,13 +1,17 @@
-// Write a programme to return addition of the numbers which are multiple of 3 and 5 between a given number.
+// Write a programme for a grade system for student's marks.
 
-console.log(sumMulti(15));
+result = [95, 85, 17, 98];
+console.log("Grade : " + gradeSys(result));
 
-function sumMulti(limit) {
+function gradeSys(result) {
   let sum = 0;
-
-  for (i = 0; i <= limit; i++) {
-    if (i % 3 == 0) sum += i;
-    if (i % 5 == 0) sum += i;
+  for (let marks of result) {
+    sum += marks;
   }
-  return sum;
+  sum = sum / result.length;
+  if (sum < 60) return "F";
+  else if (sum < 70) return "D";
+  else if (sum < 80) return "C";
+  else if (sum < 90) return "B";
+  else return "A";
 }
