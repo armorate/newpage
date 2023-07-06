@@ -1,17 +1,26 @@
-// Write a programme for a grade system for student's marks.
+// Write a programme for a grade system for student's marks(taking marks in object data type).
 
-result = [95, 85, 17, 98];
-console.log("Grade : " + gradeSys(result));
+result = {
+  Maths: 34,
+  Science: 63,
+  English: 93,
+  SocialScience: 79,
+  Spanish: 4,
+};
 
-function gradeSys(result) {
-  let sum = 0;
-  for (let marks of result) {
-    sum += marks;
+console.log(gradeSys(result));
+
+function gradeSys(object) {
+  let i = 0;
+  for (let key in object) {
+    i += object[key];
   }
-  sum = sum / result.length;
-  if (sum < 60) return "F";
-  else if (sum < 70) return "D";
-  else if (sum < 80) return "C";
-  else if (sum < 90) return "B";
-  else return "A";
+  console.log("Total Marks : " + i);
+  let j = i / Object.keys(object).length;
+  console.log("Average : " + j);
+  if (j < 40) return "F";
+  if (j < 60) return "C";
+  if (j < 80) return "B";
+  else if (j <= 100) return "A";
+  else return "enter valid result data!";
 }
