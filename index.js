@@ -1,16 +1,13 @@
-// Write a programme to log prime numbers till given number.
+// Just an Object.
 
-logPrime(7);
+let obj1 = {
+  name: "Aloo",
+  age: 34,
+  sex: "female",
+  address: { state: "Alaska", country: "USA" },
+  voter: function () {
+    console.log("yes");
+  },
+};
 
-function logPrime(num) {
-  for (let i = 2; i <= num; i++) {
-    let isPrime = true;
-    for (let j = 2; j < i; j++) {
-      if (i % j === 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    if (isPrime) console.log(i);
-  }
-}
+obj1.voter();
