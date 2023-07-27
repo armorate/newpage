@@ -1,15 +1,12 @@
-// Defining an object using factory function.
+// Creating an object using Constructor function.
+// while creating an object using constructor function we should use pascal notation for naming the function.
 
-function greet(name, age) {
-  return {
-    name,
-    age,
-    greetPerm() {
-      let i = age >= 18 ? "allowed" : "prohibited";
-      console.log("Hi " + name + ", Your entry to the club is " + i + ".");
-    },
+function Greet(name) {
+  this.name = name;
+  this.greet = function () {
+    console.log("Hi, " + name + "!");
   };
 }
 
-const person02 = greet("Jason", 37);
-person02.greetPerm();
+const person01 = new Greet("Samantha");
+person01.greet();
