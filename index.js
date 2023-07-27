@@ -1,15 +1,15 @@
-// Just an Object.
+// Defining an object using factory function.
 
-let obj1 = {
-  name: "Aloo",
-  age: 14,
-  sex: "female",
-  address: { state: "Alaska", country: "USA" },
-  voter: function () {
-    let i = obj1.age;
-    let j = i >= 18 ? "Yes" : "No";
-    console.log(j);
-  },
-};
+function greet(name, age) {
+  return {
+    name,
+    age,
+    greetPerm() {
+      let i = age >= 18 ? "allowed" : "prohibited";
+      console.log("Hi " + name + ", Your entry to the club is " + i + ".");
+    },
+  };
+}
 
-obj1.voter();
+const person02 = greet("Jason", 37);
+person02.greetPerm();
