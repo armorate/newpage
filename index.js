@@ -1,12 +1,14 @@
-// Creating an object using Constructor function.
-// while creating an object using constructor function we should use pascal notation for naming the function.
+// Object Stuff
+// initializing a variable using const does'nt mean it's content can not be modified, it means that that specific variable name can not be re-assigned.
 
-function Greet(name) {
-  this.name = name;
-  this.greet = function () {
-    console.log("Hi, " + name + "!");
-  };
-}
+const rectangle = { height: 30 };
 
-const person01 = new Greet("Samantha");
-person01.greet();
+rectangle.width = 10; // to add
+rectangle.area = function () {
+  let i = rectangle.height * rectangle.width;
+  console.log(i);
+};
+
+delete rectangle.area; //  to delete
+
+console.log(rectangle);
