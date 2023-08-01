@@ -1,21 +1,27 @@
-// Value vs Reference types
-// in primitive/value type the memory address of variable and data is same unlike reference type where the memort addresses of variable and data are different.
-// for Primitive/Value type
-let x = 20;
+// Cloning an object
 
-function increment(num) {
-  num++;
-}
+const person = {
+  name: "Sam",
+  age: 33,
+  adult: function () {
+    return person.age >= 18 ? "True" : "False";
+  },
+};
 
-increment(x); // here in the function, parameter num is assigned a copy of the value of x, which is now independent of x's actual value
-console.log(x); // Primitive/value types are copied by their value
+// using for-in loop
+// const obj1 = {};
+// for (key in person) {
+//   obj1[key] = person[key];
+// }
 
-// for Reference type
-let obj1 = { y: 30 };
+// using assign
+// const obj1 = { sex: "male" };
+// Object.assign(obj1, person);
+// or
+// const obj1 = Object.assign({}, person);
 
-function incrementobj(obj) {
-  obj.y++;
-}
+// using Spread operator(shortest way)
+const obj1 = { ...person };
 
-incrementobj(obj1); // here in the function, parameter obj is assigned the reference of obj1, which means they are holding the same mamery address value
-console.log(obj1.y); // Reference/Object type are copied by their reference (address in the memory)
+console.log(obj1);
+console.log(person.adult());
