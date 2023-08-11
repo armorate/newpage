@@ -1,29 +1,31 @@
-// Create an address object using factory function and constructor function
-
-// using factory function
-function createAddress1(name, zipCode) {
-  return {
-    name,
-    zipCode,
-    Country: "USA",
-  };
-}
-
-const address1 = createAddress1("Samuel Gibson", 33824);
+// Create two functions, one to check if two objects have same elements and second to check if two objects are referencing to the same object.
 
 // using constructor function
-function CreateAddress2(zipCode) {
-  (this.city = "london"), (this.zipCode = zipCode), (this.Country = "UK");
+function CreateAddress(name, zipCode, country) {
+  this.name = name;
+  this.zipCode = zipCode;
+  this.country = country;
 }
 
-const address2 = new CreateAddress2(11255);
+const address1 = new CreateAddress("a", "b", "c");
+const address2 = new CreateAddress("a", "b", "c");
+const address3 = address1;
 
-// a function to log object's properties and values
-function showAddress(obj) {
-  for (let key in obj) {
-    console.log(key, obj[key]);
-  }
+// to check if both objects have same properties
+function areEqual(address1, address2) {
+  return (
+    address1.name == address2.name &&
+    address1.zipCode == address2.zipCode &&
+    address1.country == address2.country
+  );
 }
 
-showAddress(address1);
-showAddress(address2);
+// to check if both objects are referencing the same object
+function areSame(add1, add2) {
+  return add1 === add2;
+}
+
+console.log(areEqual(address1, address2));
+
+console.log(areSame(address1, address2));
+console.log(areSame(address1, address3));
