@@ -1,15 +1,9 @@
-// Create an unpublished blogspot object using constructor function with following properties:
-// title, body, author, views, comments, isLive
+// Create an array of objects for three different kind of price ranges for an e-shop items.
 
-let blogspot = new CreateBlogspot("a", "b", "c");
+let priceRanges = [
+  { name: "budget-friendly", minValue: 0, maxValue: 10 },
+  { name: "expensive", minValue: 10.01, maxValue: 25 },
+  { name: "very-expensive", minValue: 25.01, maxValue: 200 },
+];
 
-function CreateBlogspot(title, author, body) {
-  this.title = title;
-  this.author = author;
-  this.body = body;
-  this.views = 0;
-  this.comments = [];
-  this.isLive = false;
-}
-
-console.log(blogspot);
+console.log(priceRanges);
