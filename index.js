@@ -1,19 +1,19 @@
-// Removing elements from an array.
+// Emptying an array.
 
-const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let num = [3, 5, 3, 44, 2];
+let another = num; // We need to reference the num variable to another variable so that after emtying the num variable it does'nt get automatically deleted by the garbage collector.
 
-// End
-const last = digits.pop();
-console.log(last);
-console.log(digits);
+// Solution 1
+// num = [];
 
-// Beginning
-const first = digits.shift();
-console.log(first);
-console.log(digits);
+// Solution 2
+// num.length = 0;
 
-// Somewhere in the middle
-digits.splice(4, 2);
-console.log(digits);
+// Solution 3
+// num.splice(0, num.length);
 
-// pop & shift method return the value they remove.
+// Solution 4
+// while (num.length > 0) num.pop();
+
+console.log(num);
+console.log(another);
