@@ -1,4 +1,4 @@
-// Finding reference type elements in an array.
+// Arrow function - it can be used instead of a callback function(it's efficient and shortens the code).
 
 const person = [
   { id: 1, name: "a" },
@@ -6,16 +6,11 @@ const person = [
   { id: 3, name: "c" },
 ];
 
-// to return element
-let found = person.find(function (x) {
-  return x.id === 2;
-});
+// let found = person.find(function (x) {
+//   return x.id === 2;
+// });
+
+// using arrow function for the same code
+let found = person.find((x) => x.id === 2);
 
 console.log(found);
-
-// to return element's index
-let found2 = person.findIndex(function (x) {
-  return x.name === "a";
-});
-
-console.log(found2);
