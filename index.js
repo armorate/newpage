@@ -1,16 +1,19 @@
-// Arrow function - it can be used instead of a callback function(it's efficient and shortens the code).
+// Removing elements from an array.
 
-const person = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-  { id: 3, name: "c" },
-];
+const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// let found = person.find(function (x) {
-//   return x.id === 2;
-// });
+// End
+const last = digits.pop();
+console.log(last);
+console.log(digits);
 
-// using arrow function for the same code
-let found = person.find((x) => x.id === 2);
+// Beginning
+const first = digits.shift();
+console.log(first);
+console.log(digits);
 
-console.log(found);
+// Somewhere in the middle
+digits.splice(4, 2);
+console.log(digits);
+
+// pop & shift method return the value they remove.
