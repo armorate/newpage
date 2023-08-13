@@ -1,14 +1,11 @@
-// Adding elements at different positions in an array.
+// Finding elements in an array.
 
-const digits = [3, 5, 6];
+const digits = [3, 5, 2, 4, 3, 4];
 
-// End
-digits.push(7, 8);
+console.log(digits.indexOf(4));
+console.log(digits.indexOf(3, 2)); // (search-element, start-index)
 
-// Beginning
-digits.unshift(1, 2);
+console.log(digits.lastIndexOf(4));
 
-// Middle array.splice(start-index, no.-of-items-to-be-deleted, new-item, new-item , ---)
-digits.splice(3, 0, 4);
-
-console.log(digits);
+console.log(digits.includes(5));
+console.log(digits.includes(1));
