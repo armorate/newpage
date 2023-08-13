@@ -1,11 +1,21 @@
-// Finding elements in an array.
+// Finding reference type elements in an array.
 
-const digits = [3, 5, 2, 4, 3, 4];
+const person = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+  { id: 3, name: "c" },
+];
 
-console.log(digits.indexOf(4));
-console.log(digits.indexOf(3, 2)); // (search-element, start-index)
+// to return element
+let found = person.find(function (x) {
+  return x.id === 2;
+});
 
-console.log(digits.lastIndexOf(4));
+console.log(found);
 
-console.log(digits.includes(5));
-console.log(digits.includes(1));
+// to return element's index
+let found2 = person.findIndex(function (x) {
+  return x.name === "a";
+});
+
+console.log(found2);
