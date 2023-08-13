@@ -1,9 +1,14 @@
-// Create an array of objects for three different kind of price ranges for an e-shop items.
+// Adding elements at different positions in an array.
 
-let priceRanges = [
-  { name: "budget-friendly", minValue: 0, maxValue: 10 },
-  { name: "expensive", minValue: 10.01, maxValue: 25 },
-  { name: "very-expensive", minValue: 25.01, maxValue: 200 },
-];
+const digits = [3, 5, 6];
 
-console.log(priceRanges);
+// End
+digits.push(7, 8);
+
+// Beginning
+digits.unshift(1, 2);
+
+// Middle array.splice(start-index, no.-of-items-to-be-deleted, new-item, new-item , ---)
+digits.splice(3, 0, 4);
+
+console.log(digits);
