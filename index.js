@@ -1,11 +1,11 @@
-// Spread operator.
+// iterating an array.
 
-const num1 = [3, 4, 5];
-const num2 = [6, 7];
+const num = [4, 5, 3, 45, 23];
 
-// Concatenation using spread operator
-const num3 = [...num1, "a", ...num2];
-console.log(num3);
+// using for loop
+for (key of num) {
+  console.log(key);
+}
 
-const copy = [...num2];
-console.log(copy);
+// using forEach method
+num.forEach((num, index) => console.log(index, num));
