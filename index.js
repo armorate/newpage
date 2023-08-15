@@ -1,11 +1,14 @@
-// iterating an array.
+// joining arrays
 
-const num = [4, 5, 3, 45, 23];
+const num = [3, 2, 3, 55];
+const joined = num.join("-"); // join method return an string.
+console.log(joined);
 
-// using for loop
-for (key of num) {
-  console.log(key);
-}
+// split method
+const message = "This script";
+const split1 = message.split("i"); // split returns an array.
+const split2 = message.split(" ");
+console.log(split1, split2);
 
-// using forEach method
-num.forEach((num, index) => console.log(index, num));
+const joined1 = split2.join("-");
+console.log(joined1);
