@@ -1,14 +1,19 @@
-// joining arrays
+// sorting arrays
 
-const num = [3, 2, 3, 55];
-const joined = num.join("-"); // join method return an string.
-console.log(joined);
+const num = [4, 3, 6, 7, 5];
 
-// split method
-const message = "This script";
-const split1 = message.split("i"); // split returns an array.
-const split2 = message.split(" ");
-console.log(split1, split2);
+console.log(num.reverse());
+console.log(num.sort());
 
-const joined1 = split2.join("-");
-console.log(joined1);
+const objarr = [
+  { id: 1, name: "apple" },
+  { id: 2, name: "mango" },
+  { id: 3, name: "banana" },
+];
+console.log(
+  objarr.sort(function (a, b) {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  })
+);
