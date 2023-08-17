@@ -1,19 +1,17 @@
-// sorting arrays
+// checking elements of an array
 
-const num = [4, 3, 6, 7, 5];
+const num = [4, 3, -6, 7, 5];
 
-console.log(num.reverse());
-console.log(num.sort());
+// every() - exits as soon as condition is false
+const allPositive = num.every(function (value) {
+  return value >= 0;
+});
 
-const objarr = [
-  { id: 1, name: "apple" },
-  { id: 2, name: "mango" },
-  { id: 3, name: "banana" },
-];
-console.log(
-  objarr.sort(function (a, b) {
-    if (a.name < b.name) return -1;
-    if (a.name > b.name) return 1;
-    return 0;
-  })
-);
+console.log(allPositive);
+
+// some() - exits as soon as condition is true
+const atLeastOnePositive = num.some(function (value) {
+  return value >= 0;
+});
+
+console.log(atLeastOnePositive);
