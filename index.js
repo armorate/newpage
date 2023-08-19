@@ -1,11 +1,10 @@
-// mapping elements from an array
+// reducing an array
 
-const num = [2, -2, 4, 3];
+const num = [3, 4, 2, 6, -2];
 
-const item = num.filter((x) => x > 0).map((x) => ({ value: x }));
+// let sum = 0;
+// for (let x of num) sum += x;
 
-const item1 = num.map((x) => "<li>" + x + "</li>");
-const item2 = item1.join(" ");
+const sum = num.reduce((x, y) => (x += y));
 
-console.log(item);
-console.log("<ul>" + item2 + "</ul>");
+console.log(sum);
