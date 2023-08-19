@@ -1,10 +1,11 @@
-// reducing an array
+// Ex- Write a programme to make an array for a given range by giving a min and max value.
 
-const num = [3, 4, 2, 6, -2];
+function arrayFromRange(min, max) {
+  let result = [];
+  for (let i = min; i <= max; i++) {
+    result.push(i);
+  }
+  return result;
+}
 
-// let sum = 0;
-// for (let x of num) sum += x;
-
-const sum = num.reduce((x, y) => (x += y));
-
-console.log(sum);
+console.log(arrayFromRange(3, 8));
