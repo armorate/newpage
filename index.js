@@ -1,10 +1,11 @@
-// Ex- Write a programme to make a function that does the job of includes() method.
+// Ex- Write a programme to make a function that removes the given elements from an array.
 
 const num = [3, 4, 2, 6, 7];
 
-function includes(array, findElement) {
-  for (let i of array) if (i == findElement) return true;
-  return false;
+function except(array, exceptArray) {
+  let result = [];
+  for (let x of array) if (!exceptArray.includes(x)) result.push(x);
+  return result;
 }
 
-console.log(includes(num, 1));
+console.log(except(num, [3, 2]));
