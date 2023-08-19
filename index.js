@@ -1,11 +1,10 @@
-// Ex- Write a programme to make an array for a given range by giving a min and max value.
+// Ex- Write a programme to make a function that does the job of includes() method.
 
-function arrayFromRange(min, max) {
-  let result = [];
-  for (let i = min; i <= max; i++) {
-    result.push(i);
-  }
-  return result;
+const num = [3, 4, 2, 6, 7];
+
+function includes(array, findElement) {
+  for (let i of array) if (i == findElement) return true;
+  return false;
 }
 
-console.log(arrayFromRange(3, 8));
+console.log(includes(num, 1));
