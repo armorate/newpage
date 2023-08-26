@@ -1,12 +1,13 @@
-// Ex- Write a programme to make a function that moves elements inside an array.
+// Ex- Write a programme to make a function that counts occurence of an element inside an array.
 
-const num = [3, 4, 2, 6, 7];
+const num = [3, 4, 2, 6, 4, 7];
 
-function move(array, take, leave) {
-  const result = array.splice(take, 1);
-  array.splice(leave, 0, result[0]);
-  return array;
+function countOccurences(array, element) {
+  let occurence = 0;
+  for (let x of array) if (x === element) occurence++;
+  return occurence;
 }
+
 console.log(num);
 
-console.log(move(num, 2, 0));
+console.log(countOccurences(num, 7));
