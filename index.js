@@ -1,22 +1,17 @@
-// Ex- Write a programme to return the largest element of an array.
+// Ex- Write a programme to filter movies releassed after 2000 and then sorted by their rating in descending order and return only the title of those movies.
 
-const num = [3, 4, 2, 6, 4, 7];
-console.log(num);
+const movies = [
+  {title : 'd', year: 2005, rating: 4.0},
+  {title : 'g', year: 1995, rating: 4.9},
+  {title : 'j', year: 2004, rating: 4.6},
+  {title : 'a', year: 2012, rating: 2.5},
+  {title : 'r', year: 2018, rating: 4.5},
+];
 
-function getMaxValue(array) {
-  if (array.length === 0) return undefined;
-  let element = array[0];
-  for (let x of array) if (element < x) element = x;
-  return element;
-}
+const output = movies
+  .filter(m => m.year >= 2000 && m.rating >= 4.0)
+  .sort((a,b) => a.rating - b.rating)
+  .reverse()
+  .map(m => m.title)
 
-console.log(getMaxValue(num));
-
-
-// using reduce() method
-function getMax(arr){
-  if(arr.length === 0) return undefined;
-  return arr.reduce((a,b)=> (a > b) ? a : b);
-}
-
-console.log(getMax(num));
+console.log(output);
