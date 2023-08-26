@@ -1,11 +1,12 @@
-// Ex- Write a programme to make a function that removes the given elements from an array.
+// Ex- Write a programme to make a function that moves elements inside an array.
 
 const num = [3, 4, 2, 6, 7];
 
-function except(array, exceptArray) {
-  let result = [];
-  for (let x of array) if (!exceptArray.includes(x)) result.push(x);
-  return result;
+function move(array, take, leave) {
+  const result = array.splice(take, 1);
+  array.splice(leave, 0, result[0]);
+  return array;
 }
+console.log(num);
 
-console.log(except(num, [3, 2]));
+console.log(move(num, 2, 0));
