@@ -1,11 +1,9 @@
-// Arguments object in functions - every function has and argument object, which contains the argements while calling the function.
+// Rest operator - the rest operator is used to take the arguments and makes an array out of them.
 
-function add() {
-  let x = 0;
-  console.log(arguments);
-  for(let y of arguments)
-    x += y;
-  return x;
+function cart(discount, ...prices) {
+  console.log(prices);
+  let value = prices.reduce((a , b) => a + b);
+  return value * (1-discount/100);
 }
 
-console.log(add(3,5,2,4));
+console.log(cart(25,399,200,139));
