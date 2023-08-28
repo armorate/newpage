@@ -1,17 +1,11 @@
-// Hoisting - hoisting is process that happens when we run the javascript code, at the runtime the function declarations get moved to the top of the program and are executed first.
+// Arguments object in functions - every function has and argument object, which contains the argements while calling the function.
 
-// function declaration
-
-hello();
-
-function hello(){
-  console.log('hello');
+function add() {
+  let x = 0;
+  console.log(arguments);
+  for(let y of arguments)
+    x += y;
+  return x;
 }
 
-// function expression
-
-hola();
-
-let hola = function() {
-  console.log('hola');
-}
+console.log(add(3,5,2,4));
