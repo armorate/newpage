@@ -1,8 +1,21 @@
-// default parameters
+// getters & setters
 
-function interest(principle, rate = 4, years = 3) // here rate and years are default parameters because they have a default value.
-{
-  return principle * rate/100 * years;
+// get = used to access properties
+// set = used to modify ot mutate the propertie
+
+const person = {
+  firstName : 'Alpa',
+  lastName : 'Cino',
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
 }
 
-console.log(interest(4000));
+person.fullName = 'De Weste';
+
+console.log(person);
