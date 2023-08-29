@@ -1,9 +1,8 @@
-// Rest operator - the rest operator is used to take the arguments and makes an array out of them.
+// default parameters
 
-function cart(discount, ...prices) {
-  console.log(prices);
-  let value = prices.reduce((a , b) => a + b);
-  return value * (1-discount/100);
+function interest(principle, rate = 4, years = 3) // here rate and years are default parameters because they have a default value.
+{
+  return principle * rate/100 * years;
 }
 
-console.log(cart(25,399,200,139));
+console.log(interest(4000));
