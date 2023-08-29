@@ -1,21 +1,27 @@
-// getters & setters
-
-// get = used to access properties
-// set = used to modify ot mutate the propertie
+// Basic Error handling - try & catch
 
 const person = {
-  firstName : 'Alpa',
-  lastName : 'Cino',
-  get fullName() {
-    return `${person.firstName} ${person.lastName}`;
-  },
+  firstName : 'Nick',
+  lastName : 'Varagera',
   set fullName(value) {
+    if(typeof value !== 'string')
+      throw new Error('Enter a string');
+
     const parts = value.split(' ');
+    if(parts.length !== 2)
+      throw new Error('Enter first and last name');
+
     this.firstName = parts[0];
     this.lastName = parts[1];
   }
 }
 
-person.fullName = 'De Weste';
+try {
+  person.fullName = '47e';
+}
+
+catch(e) {
+  alert(e);
+}
 
 console.log(person);
