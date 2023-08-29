@@ -1,27 +1,15 @@
-// Basic Error handling - try & catch
+// Local vs Global Scope of a variable/constant
 
-const person = {
-  firstName : 'Nick',
-  lastName : 'Varagera',
-  set fullName(value) {
-    if(typeof value !== 'string')
-      throw new Error('Enter a string');
+let x = 'a';  // globally defined variable - accessible everywhere
 
-    const parts = value.split(' ');
-    if(parts.length !== 2)
-      throw new Error('Enter first and last name');
-
-    this.firstName = parts[0];
-    this.lastName = parts[1];
+function anon() { 
+  let y = 'b';  // locally defined variable - accessible only inside this function
+  if(true) {
+    let z = 'c';  // locally defined variable - accessible only inside this if statement codeblock
   }
+  console.log(z);
 }
 
-try {
-  person.fullName = '47e';
-}
-
-catch(e) {
-  alert(e);
-}
-
-console.log(person);
+console.log(x);
+console.log(y);
+anon();
