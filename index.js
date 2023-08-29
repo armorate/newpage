@@ -1,15 +1,13 @@
-// Local vs Global Scope of a variable/constant
+// Let vs Var
 
-let x = 'a';  // globally defined variable - accessible everywhere
+// var - function-scoped
+// let/const - block-scoped
 
-function anon() { 
-  let y = 'b';  // locally defined variable - accessible only inside this function
-  if(true) {
-    let z = 'c';  // locally defined variable - accessible only inside this if statement codeblock
+function sayHi() {
+  for(var i = 0; i < 5; i++){
+    console.log('hi');
   }
-  console.log(z);
+  console.log(i); // here var i is accessible outside the block it was defined, var is a function scoped variable that means if you define a variable inside the function using var ketword it could be accessed anywhere inside that function.
 }
 
-console.log(x);
-console.log(y);
-anon();
+sayHi();
