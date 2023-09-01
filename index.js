@@ -1,28 +1,41 @@
-// The This Keyword - this keyword references to the object that is exetuting the current function.
+// Changing 'this'
 
-// method - object => calling the this keyword inside an objects function/method return that object.
-// function - global(window, global) => calling this keyword globally or inside a non-method function returns the global object in node and window object in browser.
-// *calling this keyword inside an constructor function using new keyword returns an empty object.
+// there are many ways to change what this refers to inside an mehtods function, the preferred way is using arraw function.
 
-function logg() {
-  console.log(this);  // returns window object
-}
+// using another varible
+const fun = {
+  name : 'red',
+  tags : ['a', 'b', 'c'],
+  showtags() {
+    let that = this;  // here that refers to what this is referring now
+    this.tags.forEach(function(tags) {
+      console.log(that.name, tags);
+      }
+    )
+  }
+};
 
-logg();
+fun.showtags();
 
-const rock = {
-  title : 'camel',
-  tags : ['green', 'red', 'angry'],
-  age() {
-    console.log(this);  // returns methods object
-  },
-  color() {
-    this.tags.forEach(function(tag) { 
-      console.log(this, tag); // here it's not an method, that is why it returns window object
-    });
+// using bind method
+const fun1 = {
+  name : 'blue',
+  tags : ['a','b','c'],
+  showtags() {
+    this.tags.forEach( function(tags) {
+      console.log(this.name, tags);
+    }.bind(this));
   }
 }
 
-rock.age();
+fun1.showtags();
 
-rock.color();
+// using arraw function
+const fun2 = {
+  name : 'green',
+  tags : ['a', 'b','c'],
+  showtags() {
+    this.tags.forEach(tags => console.log(this.name, tags)) } // inside an arrow function this refers to the inherited value of this from parent object
+}
+
+fun2.showtags();
