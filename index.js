@@ -1,13 +1,28 @@
-// Let vs Var
+// The This Keyword - this keyword references to the object that is exetuting the current function.
 
-// var - function-scoped
-// let/const - block-scoped
+// method - object => calling the this keyword inside an objects function/method return that object.
+// function - global(window, global) => calling this keyword globally or inside a non-method function returns the global object in node and window object in browser.
+// *calling this keyword inside an constructor function using new keyword returns an empty object.
 
-function sayHi() {
-  for(var i = 0; i < 5; i++){
-    console.log('hi');
-  }
-  console.log(i); // here var i is accessible outside the block it was defined, var is a function scoped variable that means if you define a variable inside the function using var ketword it could be accessed anywhere inside that function.
+function logg() {
+  console.log(this);  // returns window object
 }
 
-sayHi();
+logg();
+
+const rock = {
+  title : 'camel',
+  tags : ['green', 'red', 'angry'],
+  age() {
+    console.log(this);  // returns methods object
+  },
+  color() {
+    this.tags.forEach(function(tag) { 
+      console.log(this, tag); // here it's not an method, that is why it returns window object
+    });
+  }
+}
+
+rock.age();
+
+rock.color();
