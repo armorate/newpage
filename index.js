@@ -1,15 +1,10 @@
-// Write a programme to sum arguments and sum array as arguments.
+// create an object circle with properties radius and area, where area is a read only propertie.
 
-function sum(...items) {
-  return items.reduce((a,b) => a + b);
-}
+const circle = {
+  radius : 5,
+  get area() {
+    return Math.PI * this.radius * this.radius;
+  }
+};
 
-console.log(sum(3,4,55,4));
-
-function sumArray() {
-  if(arguments.length == 1 && Array.isArray(arguments[0]));
-  arguments = [...arguments[0]];
-  return arguments.reduce((a,b) => a + b);
-}
-
-console.log(sumArray([3,2,5]));
+console.log(circle.area);
