@@ -1,10 +1,22 @@
-// create an object circle with properties radius and area, where area is a read only propertie.
+// implement error handling using try, catch
 
-const circle = {
-  radius : 5,
-  get area() {
-    return Math.PI * this.radius * this.radius;
-  }
-};
+try {
+  const numbers = [2, 3, 4, 5];
 
-console.log(circle.area);
+  const count = countOccurences(776,5);
+  console.log(count);
+}
+
+catch(e) {
+  console.log(e.message);
+}
+
+function countOccurences(array, searchElement) {
+  if(!Array.isArray(array))
+    throw new Error('Argument is not an array.');
+
+  return array.reduce((accumulator, current) => {
+  const occurrence = (current === searchElement) ? 1 : 0;
+  return accumulator + occurrence;}, 0);
+}
+
