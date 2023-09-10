@@ -1,22 +1,14 @@
-// implement error handling using try, catch
+// ProjectEuler qid-1 - Find the sum of all the multiples of 3 or 5 below 1000.
 
-try {
-  const numbers = [2, 3, 4, 5];
-
-  const count = countOccurences(776,5);
-  console.log(count);
+function logSum(num) {
+	let x = 0;
+	let array = [];
+	for(x = 1; x < num; x++)
+	{
+		if(x % 3 === 0 || x % 5 === 0)
+			array.push(x);
+	}
+	return array.reduce((a, b) => a + b);
 }
 
-catch(e) {
-  console.log(e.message);
-}
-
-function countOccurences(array, searchElement) {
-  if(!Array.isArray(array))
-    throw new Error('Argument is not an array.');
-
-  return array.reduce((accumulator, current) => {
-  const occurrence = (current === searchElement) ? 1 : 0;
-  return accumulator + occurrence;}, 0);
-}
-
+console.log(logSum(1000));
