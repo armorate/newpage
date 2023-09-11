@@ -1,14 +1,18 @@
-// ProjectEuler qid-1 - Find the sum of all the multiples of 3 or 5 below 1000.
+// ProjectEuler qid-2 - By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-function logSum(num) {
-	let x = 0;
-	let array = [];
-	for(x = 1; x < num; x++)
-	{
-		if(x % 3 === 0 || x % 5 === 0)
-			array.push(x);
+function logFibSum(num) {
+	let x;
+	let array = [1,2];
+	for(x = 1; x < 100; x++)
+	{	
+		if(array[x] >= num)
+		{
+			array.pop(array[x]);
+			return array.reduce((a, b) => {if(b % 2 === 0){a += b;} return a;},0);
+		}
+		array.push(array[x] + array[x - 1]);
 	}
 	return array.reduce((a, b) => a + b);
 }
 
-console.log(logSum(1000));
+console.log(logFibSum(4000000));
