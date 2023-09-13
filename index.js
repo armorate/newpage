@@ -1,28 +1,31 @@
-// ProjectEuler qid-5 - what is the smallest positive number that is completely divisible by all of the numbers from 1 to 20?
+// ProjectEuler qid-4 - find the largest palindrome made from the product of two 3-digit numbers.
 
 
-function divisible(num) {
-	let x,y,z;
-	let a = 1;
-	let b = 0;
-	let c = 0;
-	// for(x = 1; x <= num; x++)
-	// {
-	// 	if(x == 5) {console.log(a);}
-	// 	if(a < x) { a *= x}
-	// 	else if(a % x !== 0) { a *= (x / (a % x));}
-	// }
-
-		for(x = 2; x < Number.MAX_SAFE_INTEGER; x++)
-	{
-		for(y = 1; y <= num; y++)
-		{
-			if(x % y === 0) { b++;}
-			else { b = 0;}
-		}
-		if(b == num) {return x;}
+function reverseOrder(num) {
+	let x = num;
+	let result = 0;
+	while(x > 0) {
+		let lastPlace = x % 10;
+		result = (result * 10) + lastPlace;
+		x = Math.floor(x / 10);
 	}
-	return a;
+	if(result === num){return 1;}
+	return 0;
 }
 
-console.log(divisible(20));
+function checkPalindrome() {
+	let x, y;
+	let array = [];
+	for(x = 999; x >= 100; x--){
+		for(y = 999; y >= 100; y--){
+			let z = x * y;
+			if(reverseOrder(z) === 1){
+				array.push(z);
+			}
+		}
+	}
+	array = array.sort(function (a, b) { return b - a });
+	return array[0];
+}
+
+console.log(checkPalindrome());
