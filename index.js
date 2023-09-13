@@ -1,31 +1,18 @@
-// ProjectEuler qid-4 - find the largest palindrome made from the product of two 3-digit numbers.
+// ProjectEuler qid-7 - What is the 10001st prime number?
 
 
-function reverseOrder(num) {
-	let x = num;
-	let result = 0;
-	while(x > 0) {
-		let lastPlace = x % 10;
-		result = (result * 10) + lastPlace;
-		x = Math.floor(x / 10);
-	}
-	if(result === num){return 1;}
-	return 0;
-}
-
-function checkPalindrome() {
+function logPrime(index) {
 	let x, y;
-	let array = [];
-	for(x = 999; x >= 100; x--){
-		for(y = 999; y >= 100; y--){
-			let z = x * y;
-			if(reverseOrder(z) === 1){
-				array.push(z);
-			}
+	let z = 0;
+	let array = [2];
+	for(x = 3; x <= Number.MAX_SAFE_INTEGER; x+=2){
+		for(y = 3; y < x; y++){
+			if((x % y) === 0) {z = 1;}
 		}
+		if(z === 0) {array.push(x)}
+		z = 0;
+		if(array.length === index)  {return array[index - 1];}
 	}
-	array = array.sort(function (a, b) { return b - a });
-	return array[0];
 }
 
-console.log(checkPalindrome());
+console.log(logPrime(10001));
