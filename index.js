@@ -1,21 +1,21 @@
-// ProjectEuler qid-9 - There exists exactly one Pythagorean triplet for which a+b+c=1000. Find the product abc.
+// ProjectEuler qid-10 - Find the sum of the primes below two million.
 
 
-function triplet() {
-	let x,y,z;
-	let a,b,c;
-	for(x = 1; x <= 1000/2; x++) {
-		a = (x * x);
-		for(y = x; y >= 1; y--){
-			b = (y * y);
-			for(z = y; z >= 1; z--){
-				c = (z * z);
-				if((a === b + c) && (x + y + z === 1000)){
-				console.log(x,y,z);
-				return (x * y * z);}
+function sumOfPrimes(num) {
+	let z = 0;
+	let a = 2;
+	for(let x = 3; x < num; x+=2){
+		for(let y = 3; y <= Math.floor(Math.sqrt(x)); y+=2){
+			if(x % y === 0) {
+				z = 1;
+				break;
 			}
 		}
+		if(z === 0) { a += x;}
+		z = 0;
 	}
+	return a;
 }
-
-console.log(triplet());
+console.time('time-taken');
+console.log(sumOfPrimes(2000000));
+console.timeEnd('time-taken');
