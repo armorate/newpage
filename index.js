@@ -1,17 +1,10 @@
-// ProjectEuler qid-15 - Project Euler Problem 15.
+// ProjectEuler qid-16 - What is the sum of the digits of the number 2^1000 ?
 
-function factorial(num) {
-    if (num === 1) {
-        return num;
-    }
-    else {
-        return num * factorial(num - 1);
-    }
+
+function powerDigitSum(exponent) {
+    let value = 2 ** exponent,
+        array = Array.from(BigInt(value).toString(), Number);
+    return array.reduce((a, b) => a + b)
 }
 
-function routes(gridSize) {
-    let moves = gridSize * 2;
-    return (factorial(moves) / (factorial(gridSize) * factorial(moves - gridSize)));
-}
-
-console.log(routes(20));
+console.log(powerDigitSum(1000));
